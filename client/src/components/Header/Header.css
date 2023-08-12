@@ -1,0 +1,24 @@
+.h-wrapper {
+    background: var(--black);
+    color: #fff;
+}
+
+.h-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--secondary);
+    
+    row-gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.h-menu {
+    gap: 2rem;
+}
+
+.h-menu>*:hover {
+    cursor: pointer;
+}
