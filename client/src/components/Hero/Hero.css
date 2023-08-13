@@ -16,7 +16,7 @@
 
 /* ! Left side */
 .hero-left {
-    gap: 3rem;
+    gap: 3rem; /* Doesn't work */
 }
 
 .hero-title {
