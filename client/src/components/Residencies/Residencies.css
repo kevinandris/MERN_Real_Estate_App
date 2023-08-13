@@ -1,6 +1,5 @@
 .r-container {
     overflow: hidden;
-    position: relative;
     /* background-color: red; */
 }
 
@@ -54,7 +53,6 @@
 
 .r-buttons {
     position: relative;
-    z-index: 1;
     top: -1rem;
     right: 0;
     left: 35.3rem;
