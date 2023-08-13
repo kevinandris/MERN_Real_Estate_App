@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <section className='f-wrapper'>
-        <div className="paddings innerWidth flexCenter f-container">
+        <div className="paddings innerWidth flexBetween f-container">
             {/* // ! left side */}
             <div className="flexColStart f-left">
                 <img src="./logo2.png" alt="" width={120}/>
@@ -17,7 +17,7 @@ const Footer = () => {
             {/* // ! right side */}
             <div className="flexColStart f-right">
                 <span className='primaryText'>Information</span>
-                <span>13 Canterbury Park Lane, Auckland, NZ</span>
+                <span>123 Auckland CBD, Auckland, NZ</span>
 
                 <div className="flexCenter f-menu">
                     <span>Property</span>
