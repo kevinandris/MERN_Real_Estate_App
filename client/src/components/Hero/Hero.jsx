@@ -33,7 +33,7 @@ const Hero = () => {
                         <button className="button">Search</button>
                     </div>
 
-                    <div className="flexCenter stats">
+                    <div className="flexBetween stats">
                         <div className="flexColCenter stat">
                             <span> 
                                 <CountUp start={8800} end={9000} duration={4}/>
