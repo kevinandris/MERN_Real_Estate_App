@@ -9,8 +9,20 @@
 #   To run the project:
     On terminal type npm run dev.
 
-#   Frontned dependencies installed:
-    1)
+#   Frontend dependencies installed:
+    1) framer-motion
+    2) react-accessible-accordion
+    3) react-countup
+    4) react-icons
+    5) react-router-dom
+    6) react-outside-click-handler
+    7) swiper
 
 #   Backend dependencies installed:
-    1) 
+    1) prisma
+    2) nodemon
+    3) cors
+    4) dotenv
+    5) express
+    6) express-async-handler
+    7) express-oauth2-jwt-bearer
