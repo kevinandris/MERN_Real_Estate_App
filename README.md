@@ -7,7 +7,7 @@
     3) this React app uses Vite that is incredibly a useful tool to run the project faster and easier.
 
 #   To run the project:
-    On terminal type npm run dev.
+    On VS code terminal type npm run dev.
 
 #   Frontend dependencies installed:
     1) framer-motion
