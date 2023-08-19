@@ -1,11 +1,11 @@
-// ! 4
+// ! 5
 import asyncHandler from 'express-async-handler'
 import { prisma } from '../config/prismaConfig.js';
 
-// function to create a new residency
+// ! function to create a new residency
 export const createResidency = asyncHandler(async(req, res) => {
+    
     const {title, description, price, address, city, country, image, facilities, userEmail} = req.body.data
-
     console.log(req.body.data)
 
     try {
@@ -28,14 +28,16 @@ export const createResidency = asyncHandler(async(req, res) => {
         
     } catch (err) {
         if (err.code === "P2002") {
-            throw new Error("A residency with address already there");
+            throw new Error("A residency with that address already exist");
         }
 
         throw new Error(err.message);
     }
 });
 
-// function to get all the documents/residencies
+/* ================================================  */
+
+// ! function to get all the documents/residencies
 export const getAllResidencies = asyncHandler(async(req, res) => {
     const residencies = await prisma.residency.findMany({
         orderBy: {
@@ -46,7 +48,9 @@ export const getAllResidencies = asyncHandler(async(req, res) => {
     res.send(residencies);
 })
 
-// function to get a specific document/residency
+/* ================================================= */
+
+// ! function to get a specific document/residency
 export const getResidency = asyncHandler(async(req, res) => {
     const { id } = req.params;
 
@@ -58,7 +62,9 @@ export const getResidency = asyncHandler(async(req, res) => {
 
         res.send(residency)
         
-    } catch (error) {
+    } catch (err) {
         throw new Error(err.message)
     }
 })
+
+/* ================================================== */

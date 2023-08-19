@@ -1,5 +1,5 @@
-// ! 5
-import express from "express"
+// ! 4
+import express from "express";
 import { createResidency, getAllResidencies, getResidency } from "../controllers/residencyController.js";
 
 const router = express.Router();

@@ -1,8 +1,9 @@
 // ! 2
-// ! npx prisma db push command to push the models to mongoDB
+// ! npx prisma db push command to push the models to mongoDB (IMPORTANT)
+// ! npx prisma generate
 generator client {
     provider = "prisma-client-js"
-    engineType = "binary"
+    // engineType = "binary"
 }
 
 datasource db {
