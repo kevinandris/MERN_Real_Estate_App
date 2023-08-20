@@ -4,7 +4,9 @@ import { useQuery } from 'react-query'
 import { useLocation } from 'react-router-dom'
 import { getProperty } from '../../utils/api'
 import { PuffLoader } from 'react-spinners'
-import { AiFillHeart } from 'react-icons/ai'
+import { AiFillHeart, AiTwotoneCar } from 'react-icons/ai'
+import { FaShower } from 'react-icons/fa'
+import { MdMeetingRoom } from 'react-icons/md'
 
 const Property = () => {
     const { pathname } = useLocation()
@@ -52,10 +54,34 @@ const Property = () => {
                             <span className='primaryText'>{data.title}</span>
                             <span className='orangeText' style={{fontSize: '1.5rem'}}>$ {data.price}</span>
                         </div>
+
+                        {/* facilities */}
+                        <div className="flexStart facilities">
+
+                            {/* bathrooms */}
+                            <div className="flexStart facility">
+                                <FaShower size={20} color="#1F3E72" />
+                                <span>{data?.facilities?.bathrooms} Bathrooms</span>
+                            </div>
+
+                            {/* parkings */}
+                            <div className="flexStart facility">
+                                <AiTwotoneCar size={20} color="#1F3E72" />
+                                <span>{data?.facilities.parkings} Parking</span>
+                            </div>
+
+                            {/* rooms */}
+                            <div className="flexStart facility">
+                                <MdMeetingRoom size={20} color="#1F3E72" />
+                                <span>{data?.facilities.bedrooms} Room/s</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* right side */}
-                    
+                    <div className="right">
+                        this is right side
+                    </div>
 
                 </div>
             </div>

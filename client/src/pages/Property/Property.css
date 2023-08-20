@@ -28,3 +28,8 @@
     flex: 1;
     gap: 1.5rem;
 }
+
+.property-details .left .head {
+    justify-content: space-between;
+    width: 100%;
+}
