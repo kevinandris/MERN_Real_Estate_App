@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import './Header.css'
 import { BiMenuAltRight } from 'react-icons/bi'
-import  OutsideClickHandler  from "react-outside-click-handler"
 import { Link, NavLink } from 'react-router-dom'
+import  OutsideClickHandler  from "react-outside-click-handler"
+// import useHeaderColor from "../../hooks/UseHeaderColor"
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Header = () => {
   
   const [menuOpened, setMenuOpened] = useState(false); /* toggle menu to open or close */
+  // const headerColor = useHeaderColor()
   const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
       return {right: !menuOpened && "-100%"}
     }
   }
+  const {loginWithRedirect} = useAuth0()
   
   return (
     <section className='h-wrapper'>
@@ -28,13 +32,14 @@ const Header = () => {
                     <a href="mailto:kevinandris27@gmail.com">Contact</a>
 
                     {/* LOGIN BUTTON */}
-                    <button className='button'>
+                    <button className='button' onClick={loginWithRedirect}>
                       Login
                     </button>
                     
                   </div>
                 </OutsideClickHandler>
                 
+                {/* for medium and small screens */}
               <div className="menu-icon" onClick={() => setMenuOpened((prev) => !prev)}>
                 <BiMenuAltRight size={30} />
               </div>

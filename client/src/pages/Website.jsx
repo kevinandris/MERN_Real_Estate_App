@@ -15,7 +15,7 @@ const Website = () => {
           </div>
 
           <Companies />
-          <Residencies />
+          {/* <Residencies /> */}
           <Value />
           <Contact />
           <GetStarted />
