@@ -15,7 +15,7 @@ const Header = () => {
       return {right: !menuOpened && "-100%"}
     }
   }
-  const {loginWithRedirect} = useAuth0()
+  const {loginWithRedirect, isAuthenticated, user, logout} = useAuth0()
   
   return (
     <section className='h-wrapper'>
@@ -32,9 +32,17 @@ const Header = () => {
                     <a href="mailto:kevinandris27@gmail.com">Contact</a>
 
                     {/* LOGIN BUTTON */}
-                    <button className='button' onClick={loginWithRedirect}>
-                      Login
-                    </button>
+                    {
+                      !isAuthenticated ? 
+                      (
+                        <button className='button' onClick={loginWithRedirect}>
+                            Login
+                        </button>
+                      )  : 
+                      (
+                        <div >User profile</div>
+                      )
+                    }
                     
                   </div>
                 </OutsideClickHandler>
