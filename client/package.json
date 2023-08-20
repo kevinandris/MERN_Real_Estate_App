@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
+    "esri-leaflet-geocoder": "^2.3.3",
     "framer-motion": "^10.15.1",
     "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
