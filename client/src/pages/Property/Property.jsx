@@ -1,5 +1,5 @@
-import React from 'react'
 import './Property.css'
+import React from 'react'
 import { useQuery } from 'react-query'
 import { useLocation } from 'react-router-dom'
 import { getProperty } from '../../utils/api'
@@ -41,6 +41,23 @@ const Property = () => {
 
                 {/* image */}
                 <img src={data.image} alt='home image' />
+
+                <div className="flexCenter property-details">
+
+                    {/* left side */}
+                    <div className="flexColStart left">
+
+                        {/* head */}
+                        <div className="flexStart head">
+                            <span className='primaryText'>{data.title}</span>
+                            <span className='orangeText' style={{fontSize: '1.5rem'}}>$ {data.price}</span>
+                        </div>
+                    </div>
+
+                    {/* right side */}
+                    
+
+                </div>
             </div>
         </div>
     )
