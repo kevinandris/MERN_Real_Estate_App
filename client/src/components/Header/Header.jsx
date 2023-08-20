@@ -27,7 +27,7 @@ const Header = () => {
                         
                     <a href="mailto:kevinandris27@gmail.com">Contact</a>
 
-                    {/* login button */}
+                    {/* LOGIN BUTTON */}
                     <button className='button'>
                       Login
                     </button>

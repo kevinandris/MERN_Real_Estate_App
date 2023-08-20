@@ -23,7 +23,7 @@ function App() {
               <Route path='/properties' element={<Properties />}/>
             </Route>
           </Routes>
-        </Suspense>
+        </Suspense> 
       </BrowserRouter>
       <ToastContainer/>
       <ReactQueryDevtools initialIsOpen={false}/>

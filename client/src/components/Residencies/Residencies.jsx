@@ -1,3 +1,4 @@
+// ! EXPORTED TO Properties.jsx in pages folder
 import React from 'react'
 import './Residencies.css'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'

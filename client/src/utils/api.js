@@ -1,3 +1,4 @@
+// ! EXPORTED TO useProperties.jsx
 import axios from 'axios'
 import dayjs from 'dayjs'
 import { toast } from 'react-toastify'
@@ -12,6 +13,7 @@ export const getAllProperties = async() => {
             timeout: 10 * 1000,
         })
 
+        /* bad response */
         if (response.status === 400 || response.status === 500) {
             throw response.data
         }

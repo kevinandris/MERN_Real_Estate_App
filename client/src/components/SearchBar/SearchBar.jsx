@@ -1,3 +1,4 @@
+// ! exported to HERO.jsx
 import React from 'react'
 import { HiLocationMarker } from 'react-icons/hi'
 
