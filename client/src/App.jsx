@@ -1,6 +1,6 @@
 import './App.css'
 import 'react-toastify/dist/ReactToastify.css'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ToastContainer } from 'react-toastify'
@@ -9,33 +9,41 @@ import Layout from './components/Layout/Layout'
 import Properties from './pages/Properties/Properties'
 import Property from './pages/Property/Property'
 import Home from './pages/Website'
+import UserDetailContext from './components/context/UserDetailsContext'
 
 function App() {
 
   const queryClient = new QueryClient()
+  const [userDetails, setUserDetails] = useState({
+    favourites: [],
+    bookings: [],
+    token: null
+  })
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Suspense fallback={<div>...Loading</div>}>
+    <UserDetailContext.Provider value={{userDetails, setUserDetails}}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Suspense fallback={<div>...Loading</div>}>
 
-          <Routes>
+            <Routes>
 
-            <Route element={<Layout/>}>
-              <Route path="/" element={<Home />}/>
-              <Route path='/properties'>
-                <Route index element={<Properties />} />
-                <Route path=':propertyId' element={<Property />} />
+              <Route element={<Layout/>}>
+                <Route path="/" element={<Home />}/>
+                <Route path='/properties'>
+                  <Route index element={<Properties />} />
+                  <Route path=':propertyId' element={<Property />} />
+                </Route>
               </Route>
-            </Route>
 
-          </Routes>
+            </Routes>
 
-        </Suspense> 
-      </BrowserRouter>
-      <ToastContainer/>
-      <ReactQueryDevtools initialIsOpen={false}/>
-    </QueryClientProvider>
+          </Suspense> 
+        </BrowserRouter>
+        <ToastContainer/>
+        <ReactQueryDevtools initialIsOpen={false}/>
+      </QueryClientProvider>
+    </UserDetailContext.Provider>
   )
 }
 
