@@ -14,6 +14,8 @@ const Property = () => {
     const id = pathname.split("/").slice(-1)[0]
     const {data, isLoading, isError} = useQuery(['resd', id], () => getProperty(id))
 
+    const [modalOpened, setModalOpened] = useState(false)
+
     if (isLoading) {
         return (
             <div className="wrapper">
