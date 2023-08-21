@@ -1,5 +1,5 @@
 import './Property.css'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useQuery } from 'react-query'
 import { useLocation } from 'react-router-dom'
 import { getProperty } from '../../utils/api'
@@ -11,12 +11,16 @@ import { useAuth0 } from '@auth0/auth0-react'
 import Map from '../../components/Map/Map'
 import useAuthCheck from '../../hooks/useAuthCheck'
 import BookingModal from '../../components/BookingModal/BookingModal'
+import UserDetailContext from '../../components/context/UserDetailsContext'
+import { Button } from '@mantine/core'
 
 const Property = () => {
     const { pathname } = useLocation()
     const id = pathname.split("/").slice(-1)[0]
     const {data, isLoading, isError} = useQuery(['resd', id], () => getProperty(id))
 
+    const { userDetails : {token}, bookings } = useContext(UserDetailContext)
+  
     /* for opening the booking modals */
     const [modalOpened, setModalOpened] = useState(false)
     const {validateLogin} = useAuthCheck()
@@ -108,13 +112,21 @@ const Property = () => {
                         </div>
 
                         {/* booking button */}
-                        <button 
-                            className="button" 
-                            onClick={() => {
-                            validateLogin() && setModalOpened(true)
-                        }}>
-                            Book your visit
-                        </button>
+                        {
+                            bookings?.map((booking) => booking.id).includes(id) ? (
+                                <Button variant='outline' w={"100%"} color='red'>
+                                    <span>Cancel bookings</span>
+                                </Button>
+                            ) : (
+                            <button 
+                                className="button" 
+                                onClick={() => {
+                                validateLogin() && setModalOpened(true)
+                                }}
+                            >
+                                Book your visit
+                            </button>
+                            )}
 
                         <BookingModal 
                             opened={modalOpened} 

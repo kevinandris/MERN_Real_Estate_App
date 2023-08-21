@@ -5,21 +5,34 @@ import { useMutation } from 'react-query'
 import UserDetailContext from '../context/UserDetailsContext'
 import { bookVisit } from '../../utils/api'
 import { toast } from 'react-toastify'
+import dayjs from 'dayjs'
 
 const BookingModal = ({opened, setOpened, email, propertyId}) => {
 
   const [value, setValue] = useState(null)
-  const { userDetails : {token}} = useContext(UserDetailContext)
+  const { userDetails : {token}, setUserDetails } = useContext(UserDetailContext)
+
   const handleBookingSuccess = () => {
     toast.success("You have booked your visit", {
       position: "bottom-right"
-
     })
+    setUserDetails((prev) => ({
+      ...prev,
+      bookings: [
+        ...prev.bookings,
+        {
+          id: propertyId,
+          date: dayjs(value).format('DD/MM/YYYY'),
+        }
+      ]
+    }))
   }
 
   const {mutate, isLoading} = useMutation( {
     mutationFn: () => bookVisit(value, propertyId, email, token),
-    onSuccess: () => handleBookingSuccess()
+    onSuccess: () => handleBookingSuccess(),
+    onError: ({response}) => toast.error(response.data.message),
+    onSettled: () => setOpened(false)
   });
   
   return (
