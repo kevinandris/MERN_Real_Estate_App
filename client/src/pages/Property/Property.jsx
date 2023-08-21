@@ -12,19 +12,23 @@ import Map from '../../components/Map/Map'
 import useAuthCheck from '../../hooks/useAuthCheck'
 import BookingModal from '../../components/BookingModal/BookingModal'
 import UserDetailContext from '../../components/context/UserDetailsContext'
-import { Button } from '@mantine/core'
+import { Button } from '@mantine/core' // DOESN'T work for some reason
 
 const Property = () => {
     const { pathname } = useLocation()
     const id = pathname.split("/").slice(-1)[0]
     const {data, isLoading, isError} = useQuery(['resd', id], () => getProperty(id))
 
-    const { userDetails : {token}, bookings } = useContext(UserDetailContext)
-  
+    
     /* for opening the booking modals */
     const [modalOpened, setModalOpened] = useState(false)
     const {validateLogin} = useAuthCheck()
     const { user } = useAuth0()
+
+    const { 
+        userDetails : {token}, bookings , 
+        setUserDetails 
+    } = useContext(UserDetailContext)
 
     if (isLoading) {
         return (
@@ -113,10 +117,16 @@ const Property = () => {
 
                         {/* booking button */}
                         {
+                            // logic here
                             bookings?.map((booking) => booking.id).includes(id) ? (
-                                <Button variant='outline' w={"100%"} color='red'>
-                                    <span>Cancel bookings</span>
+                            <>
+                                <Button variant='outline' w={"100%"} color="red">
+                                    <span>Cancel booking</span>
                                 </Button>
+                                <span>
+                                    Your visit already booked for date {bookings?.filter((booking)=>booking?.id)[0].date}
+                                </span>
+                            </>
                             ) : (
                             <button 
                                 className="button" 
