@@ -6,9 +6,11 @@ import "swiper/css"
 import { sliderSettings } from '../../utils/common.js'
 import PropertyCard from '../PropertyCard/PropertyCard'
 import { PuffLoader } from 'react-spinners'
+import useProperties from '../../hooks/useProperties'
+
 
 const Residencies = () => {
-    const {data, isError, isLoading} = useProperties()
+    const {data, isError, isLoading} = useProperties();
 
       /* //! ERROR STATE */
     if (isError) {

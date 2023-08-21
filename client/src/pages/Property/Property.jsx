@@ -10,7 +10,7 @@ import { MdMeetingRoom, MdLocationPin } from 'react-icons/md'
 import { useAuth0 } from '@auth0/auth0-react'
 import Map from '../../components/Map/Map'
 import useAuthCheck from '../../hooks/useAuthCheck'
-// import BookingModal from '../../components/BookingModal/BookingModal'
+import BookingModal from '../../components/BookingModal/BookingModal'
 
 const Property = () => {
     const { pathname } = useLocation()
@@ -116,12 +116,12 @@ const Property = () => {
                             Book your visit
                         </button>
 
-                        {/* <BookingModal 
+                        <BookingModal 
                             opened={modalOpened} 
                             setOpened={setModalOpened} 
                             propertyId={id} 
                             email = {user?.email}
-                        /> */}
+                        />
                     </div>
 
                     {/* right side */}
