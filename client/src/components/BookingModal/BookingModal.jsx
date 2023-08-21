@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { Modal } from '@mantine/core'
 import { DatePicker } from '@mantine/dates'
 import { useMutation } from 'react-query'
-// import { bookVisit } from '../../../../server/controllers/userController'
 import UserDetailContext from '../context/UserDetailsContext'
 
 const BookingModal = ({opened, setOpened, email, propertyId}) => {
