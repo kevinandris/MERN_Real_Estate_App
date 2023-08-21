@@ -5,6 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 import  OutsideClickHandler  from "react-outside-click-handler"
 // import useHeaderColor from "../../hooks/UseHeaderColor"
 import { useAuth0 } from '@auth0/auth0-react'
+import ProfileMenu from '../ProfileMenu/ProfileMenu'
 
 const Header = () => {
   
@@ -40,7 +41,7 @@ const Header = () => {
                         </button>
                       )  : 
                       (
-                        <div >User profile</div>
+                        <ProfileMenu user={user} logout={logout}/>
                       )
                     }
                     
