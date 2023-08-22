@@ -7,17 +7,28 @@ import  OutsideClickHandler  from "react-outside-click-handler"
 import { useAuth0 } from '@auth0/auth0-react'
 import ProfileMenu from '../ProfileMenu/ProfileMenu'
 import AddPropertyModal from '../AddPropertyModal/AddPropertyModal'
+import useAuthCheck from '../../hooks/useAuthCheck'
 
 const Header = () => {
   
   const [menuOpened, setMenuOpened] = useState(false); /* toggle menu to open or close */
   // const headerColor = useHeaderColor()
+
+  const [modalOpened, setModalOpened] = useState(false);
+
   const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
       return {right: !menuOpened && "-100%"}
     }
   }
   const {loginWithRedirect, isAuthenticated, user, logout} = useAuth0()
+
+  const { validateLogin } = useAuthCheck()
+  const handleAddPropertyClick = () => {
+    if (validateLogin()) {
+      setModalOpened(true)
+    }
+  }
   
   return (
     <section className='h-wrapper'>
@@ -34,10 +45,13 @@ const Header = () => {
                     <a href="mailto:kevinandris27@gmail.com">Contact</a>
 
                     {/* // ! ADD property button */}
-                    <div>
+                    <div onClick={handleAddPropertyClick}>
                       Add Property
                     </div>
-                    <AddPropertyModal />
+                    <AddPropertyModal 
+                      opened={modalOpened}
+                      setOpened = {setModalOpened}
+                    />
 
                     {/* LOGIN BUTTON */}
                     {
