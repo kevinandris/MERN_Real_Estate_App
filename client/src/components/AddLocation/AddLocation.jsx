@@ -51,6 +51,15 @@ const { getAll} = useCountries()
                             ...form.getInputProps("City", {type: "input"})
                         }
                     />
+
+                    <TextInput 
+                        w={"100%"}
+                        withAsterisk
+                        label="Address"
+                        {
+                            ...form.getInputProps("address", {type: "input"})
+                        }
+                    />
                 </div>
 
             </div>
