@@ -25,6 +25,7 @@ const AddLocation = ({propertyDetails, setPropertyDetails}) => {
         <form>
             {/* left side */}
             <div className="flexCenter">
+
                 {/* inputs */}
                 <div className="flexColStart">
                     <Select 
@@ -33,6 +34,7 @@ const AddLocation = ({propertyDetails, setPropertyDetails}) => {
                         label="Country" 
                         clearable 
                         searchable
+                        data={getAll()}
                         {
                             ...form.getInputProps("country", {type: "input"})
                         }    
