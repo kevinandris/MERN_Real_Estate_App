@@ -1,9 +1,10 @@
+// ! exported to addLocation.jsx
 import countries from "world-countries"
 
-const formattedCounties = counties.map((country) => ({
+const formattedCounties = countries.map((country) => ({
     value: country.name.common,
     label: `${country.name.common} ${country.flag}`,
-    latlng: country.lan,
+    latlng: country.latlng,
     region: country.region
 }))
 

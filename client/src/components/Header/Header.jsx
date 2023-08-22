@@ -48,6 +48,7 @@ const Header = () => {
                     <div onClick={handleAddPropertyClick}>
                       Add Property
                     </div>
+                    
                     <AddPropertyModal 
                       opened={modalOpened}
                       setOpened = {setModalOpened}

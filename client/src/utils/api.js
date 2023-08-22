@@ -115,7 +115,7 @@ export const toFav = async ( id, email, token ) => {
     }
 }
 
-// ! this function is not running properly, line 120 is having a problem
+// ! exported to useFavourites.jsx
 export const getAllFav = async (email, token) => {
     if (!token) return
     try {
@@ -138,6 +138,7 @@ export const getAllFav = async (email, token) => {
     }
 }
 
+// ! exported to useBookings.jsx
 export const getAllBookings = async (email, token) => {
     if (!token) return
     try {
