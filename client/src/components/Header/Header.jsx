@@ -6,6 +6,7 @@ import  OutsideClickHandler  from "react-outside-click-handler"
 // import useHeaderColor from "../../hooks/UseHeaderColor"
 import { useAuth0 } from '@auth0/auth0-react'
 import ProfileMenu from '../ProfileMenu/ProfileMenu'
+import AddPropertyModal from '../AddPropertyModal/AddPropertyModal'
 
 const Header = () => {
   
@@ -31,6 +32,12 @@ const Header = () => {
                     <NavLink to="/properties">Properties</NavLink>
                         
                     <a href="mailto:kevinandris27@gmail.com">Contact</a>
+
+                    {/* // ! ADD property button */}
+                    <div>
+                      Add Property
+                    </div>
+                    <AddPropertyModal />
 
                     {/* LOGIN BUTTON */}
                     {
