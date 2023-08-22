@@ -3,6 +3,7 @@ import { useForm } from '@mantine/form'
 import { validateString } from '../../utils/common'
 import { Select, TextInput } from '@mantine/core'
 import useCountries from '../../hooks/useCountries'
+import Map from '../Map/Map'
 
 const AddLocation = ({propertyDetails, setPropertyDetails}) => {
 
@@ -65,7 +66,13 @@ const { getAll} = useCountries()
             </div>
 
         {/* right side */}
-            
+            <div>
+                <Map 
+                    address={address}
+                    city={city}
+                    country={country}
+                />
+            </div>
         </form>
     )
 }
