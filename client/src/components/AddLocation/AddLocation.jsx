@@ -1,5 +1,7 @@
 import React from 'react'
 import { useForm } from "@mantine/form"
+import { validateString } from '../../utils/common'
+import { Select } from '@mantine/core'
 
 const AddLocation = ({propertyDetails, setPropertyDetails}) => {
 
@@ -12,21 +14,36 @@ const AddLocation = ({propertyDetails, setPropertyDetails}) => {
 
         validate: {
             country: (value) => validateString(value),
+            city: (value) => validateString(value),
+            address: (value) => validateString(value),
         }
     })
+
+    const {country, city, address} = from.values;
     
-  return (
-    <form>
-        {/* left side */}
-        <div className="flexCenter">
-            {/* inputs */}
+    return (
+        <form>
+            {/* left side */}
+            <div className="flexCenter">
+                {/* inputs */}
+                <div className="flexColStart">
+                    <Select 
+                        w={"100%"} 
+                        withAsterisk 
+                        label="Country" 
+                        clearable 
+                        searchable
+                        {
+                            ...form.getInputProps("country", {type: "input"})
+                        }    
+                        />
+                </div>
+            </div>
 
-        </div>
 
-
-        {/* right side */}
-    </form>
-  )
+            {/* right side */}
+        </form>
+    )
 }
 
 export default AddLocation
