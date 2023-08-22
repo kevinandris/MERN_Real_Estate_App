@@ -1,8 +1,8 @@
-export const getMenuStyles = (menuOpened) => {
-    if (document.documentElement.clientWidth <= 800) {
-        return { right: !menuOpened && "-100%"};
-    }
-}
+// export const getMenuStyles = (menuOpened) => {
+//     if (document.documentElement.clientWidth <= 800) {
+//         return { right: !menuOpened && "-100%"};
+//     }
+// }
 
 export const sliderSettings = {
     slidesPerView: 1,
@@ -24,14 +24,13 @@ export const sliderSettings = {
 }
 
 export const updateFavourites = (id, favourites) => {
-    if(favourites.includes(id))
-    {
-         return favourites.filter((resId) =>resId !== id)
+    if (favourites.includes(id)) {
+        return favourites.filter((resId) => resId !== id)
     } else {
         return [...favourites, id]
     }
 }
 
 export const checkFavourites = (id, favourites) => {
-    return favourites.includes(id) ? "#fa3e5f" : "#fff";
+    return favourites.includes(id)? "#fa3e5f" : "#fff";
 }

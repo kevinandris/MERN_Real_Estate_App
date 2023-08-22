@@ -86,17 +86,17 @@ export const removeBooking = async (id, email, token) => {
             },
             {
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${token}`
                 }
             }
         )
     } catch (error) {
-        toast.error("Something went wrong, Please try again")
+        toast.error("Something went wrong, please try again")
         throw error
     }
 }
 
-export const toFav = async ( id, email, token) => {
+export const toFav = async ( id, email, token ) => {
     try {
         await api.post(
             `/user/toFav/${id}`,
@@ -105,11 +105,12 @@ export const toFav = async ( id, email, token) => {
             },
             {
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${token}`
                 }
             }
         )
     } catch (error) {
-        throw error;
+        toast.error("Something went wrong, please try again")
+        throw error
     }
 }

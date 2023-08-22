@@ -31,12 +31,12 @@ const Property = () => {
         setUserDetails 
     } = useContext(UserDetailContext)
 
-    const { mutate: cancelBooking, isLoading: cancelling} = useMutation({
+    const { mutate: cancelBooking, isLoading: cancelling } = useMutation ({
         mutationFn: () => removeBooking(id, user?.email, token),
         onSuccess: () => {
             setUserDetails((prev) => ({
                 ...prev,
-                bookings: prev.bookings.filter((booking) => booking?.id !== id) // remove current bookings
+                bookings: prev.bookings.filter((booking?.id) !== id) // remove current booking
             }))
 
             toast.success("Booking cancelled", {position: 'bottom-right'})
