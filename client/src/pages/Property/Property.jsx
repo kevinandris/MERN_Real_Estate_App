@@ -14,6 +14,7 @@ import BookingModal from '../../components/BookingModal/BookingModal'
 import UserDetailContext from '../../components/context/UserDetailsContext'
 import { Button } from '@mantine/core' // DOESN'T work for some reason
 import { toast } from 'react-toastify'
+import Heart from '../../components/Heart/Heart'
 
 const Property = () => {
     const { pathname } = useLocation()
@@ -67,7 +68,7 @@ const Property = () => {
             <div className="flexColStart paddings innerWidth property-container">
                 {/* like button */}
                 <div className="like">
-                    <AiFillHeart size={24} color='#fff'/>
+                    <Heart id={id}/>
                 </div>
 
                 {/* image */}
