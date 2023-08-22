@@ -7,10 +7,12 @@ import UserDetailContext from '../context/UserDetailsContext.js'
 import { useMutation } from 'react-query'
 import { createUser } from '../../utils/api.js'
 import useFavourites from '../../hooks/useFavourites.jsx'
+import useBookings from '../../hooks/useBookings.jsx'
 
 const Layout = () => {
 
   useFavourites()
+  useBookings()
 
   const {isAuthenticated, user, getAccessTokenWithPopup} = useAuth0()
   const {setUserDetails} =  useContext(UserDetailContext)
