@@ -18,7 +18,15 @@ const Heart = ({id}) => {
     } = useContext(UserDetailContext)
 
     const { mutate } = useMutation({
-        mutationFn: () => toFav(id, true?.email, token)
+        mutationFn: () => toFav(id, true?.email, token),
+        onSuccess: () => {
+            setUserDetails((prev) => (
+                {
+                    ...prev,
+                    favourites: updateFavourites(id, prev.favourites)
+                }
+            ))
+        }
     })
 
     const handleLike = () => {
