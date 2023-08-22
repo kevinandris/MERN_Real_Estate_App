@@ -1,8 +1,8 @@
 import './Property.css'
 import React, { useContext, useState } from 'react'
-import { useQuery } from 'react-query'
+import { useMutation, useQuery } from 'react-query'
 import { useLocation } from 'react-router-dom'
-import { getProperty } from '../../utils/api'
+import { getProperty, removeBooking } from '../../utils/api'
 import { PuffLoader } from 'react-spinners'
 import { AiFillHeart, AiTwotoneCar } from 'react-icons/ai'
 import { FaShower } from 'react-icons/fa'
@@ -13,13 +13,13 @@ import useAuthCheck from '../../hooks/useAuthCheck'
 import BookingModal from '../../components/BookingModal/BookingModal'
 import UserDetailContext from '../../components/context/UserDetailsContext'
 import { Button } from '@mantine/core' // DOESN'T work for some reason
+import { toast } from 'react-toastify'
 
 const Property = () => {
     const { pathname } = useLocation()
     const id = pathname.split("/").slice(-1)[0]
     const {data, isLoading, isError} = useQuery(['resd', id], () => getProperty(id))
 
-    
     /* for opening the booking modals */
     const [modalOpened, setModalOpened] = useState(false)
     const {validateLogin} = useAuthCheck()
@@ -29,6 +29,18 @@ const Property = () => {
         userDetails : {token}, bookings , 
         setUserDetails 
     } = useContext(UserDetailContext)
+
+    const { mutate: cancelBooking, isLoading: cancelling} = useMutation({
+        mutationFn: () => removeBooking(id, user?.email, token),
+        onSuccess: () => {
+            setUserDetails((prev) => ({
+                ...prev,
+                bookings: prev.bookings.filter((booking) => booking?.id !== id) // remove current bookings
+            }))
+
+            toast.success("Booking cancelled", {position: 'bottom-right'})
+        }
+    })
 
     if (isLoading) {
         return (
@@ -120,7 +132,7 @@ const Property = () => {
                             // logic here
                             bookings?.map((booking) => booking.id).includes(id) ? (
                             <>
-                                <Button variant='outline' w={"100%"} color="red">
+                                <Button variant='outline' w={"100%"} color="red" onClick={() => cancelBooking()} disabled={cancelling}>
                                     <span>Cancel booking</span>
                                 </Button>
                                 <span>
