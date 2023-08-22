@@ -6,8 +6,11 @@ import { useAuth0 } from '@auth0/auth0-react'
 import UserDetailContext from '../context/UserDetailsContext.js'
 import { useMutation } from 'react-query'
 import { createUser } from '../../utils/api.js'
+import useFavourites from '../../hooks/useFavourites.jsx'
 
 const Layout = () => {
+
+  useFavourites()
 
   const {isAuthenticated, user, getAccessTokenWithPopup} = useAuth0()
   const {setUserDetails} =  useContext(UserDetailContext)
