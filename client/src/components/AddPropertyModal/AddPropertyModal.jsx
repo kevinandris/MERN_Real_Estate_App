@@ -1,8 +1,16 @@
+import { Modal } from '@mantine/core'
 import React from 'react'
 
-const AddPropertyModal = () => {
+const AddPropertyModal = ({opened, setOpened}) => {
   return (
-    <div>AddPropertyModal</div>
+    <Modal
+        opened={opened}
+        onClose={() => setOpened(false)}
+        closeOnClickOutside
+        size={"90rem"}
+    >
+        Property Modal
+    </Modal>
   )
 }
 
