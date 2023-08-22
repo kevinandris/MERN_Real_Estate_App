@@ -1,9 +1,10 @@
-import { Container, Modal } from '@mantine/core'
-import React from 'react'
+import { Container, Modal, Stepper } from '@mantine/core'
+import React, { useState } from 'react'
+import AddLocation from '../AddLocation/AddLocation'
 
 const AddPropertyModal = ({opened, setOpened}) => {
 
-    
+    const [active, setActive] = useState(0)
     return (
         <Modal
             opened={opened}
@@ -13,8 +14,8 @@ const AddPropertyModal = ({opened, setOpened}) => {
         >
             <Container h={"40rem"} w={"100%"}>
                 <Stepper active={active} onStepClick={setActive} breakpoint="sm">
-                    <Stepper.Step label="First step" description="Create an account">
-                    Step 1 content: Create an account
+                    <Stepper.Step label="Location" description="Address">
+                        <AddLocation />
                     </Stepper.Step>
                     <Stepper.Step label="Second step" description="Verify email">
                     Step 2 content: Verify email
