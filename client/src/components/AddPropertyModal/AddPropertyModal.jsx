@@ -5,6 +5,22 @@ import AddLocation from '../AddLocation/AddLocation'
 const AddPropertyModal = ({opened, setOpened}) => {
 
     const [active, setActive] = useState(0)
+    const [propertyDetails, setPropertyDetails] = useState({
+        title: "",
+        description: "",
+        price: 0,
+        country: "",
+        city: "",
+        address: "",
+        image: 0,
+        facilities: {
+        bedrooms: 0,
+        parkings: 0,
+        bathrooms: 0,
+    },
+        userEmail: user?.email
+    })
+    
     return (
         <Modal
             opened={opened}
