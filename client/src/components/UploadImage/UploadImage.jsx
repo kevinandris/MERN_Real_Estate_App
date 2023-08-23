@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 import './UploadImage.css'
+import { Button, Group } from '@mantine/core'
 
 const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) => {
 
@@ -23,7 +24,12 @@ const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) 
                 }
             }
         )
-    })
+    }, [])
+
+    const handleNext = () => {
+        setPropertyDetails((prev) => ({...prev, image: imageURL}))
+        nextStep();
+    }
 
     return (
 
@@ -38,11 +44,19 @@ const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) 
                         <span>Upload Image</span>
                     </div>
                 ) : (
-                    <div className="uploadImage">
+                    <div 
+                        className="uploadImage"
+                        onClick={() => widgetRef.current?.open()}
+                    >
                         <img src={imageURL} alt="" />
                     </div>
                 )
             }
+
+        <Group position='center' mt={'xl'}>
+            <Button variant="default" onClick={prevStep}>Back</Button>
+            <Button  onClick={handleNext} disabled={!imageURL}>Next</Button>
+        </Group>
         </div>
     )
 }
