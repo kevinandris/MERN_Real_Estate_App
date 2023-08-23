@@ -37,5 +37,5 @@ export const checkFavourites = (id, favourites) => {
 
 // ! exported to AddLocation.jsx
 export const validateString = (value) => {
-    value?.length < 3 || value === null? "Must have at least 3 characters" : null;
+    return value?.length < 3 || value === null? "Must have at least 3 characters" : null;
 }

@@ -33,7 +33,7 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
     }
 
   return (
-    <Box>
+    <Box maw="50%" mx="auto" my="md">
         <Form
             onSubmit={(e) => {
                 e.preventDefault();
