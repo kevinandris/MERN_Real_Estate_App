@@ -7,7 +7,7 @@ import useProperties from '../../hooks/useProperties'
 
 const Properties = () => {
   const {data, isError, isLoading} = useProperties()
-  const [filter, setFilter] = useState("filter")
+  const [filter, setFilter] = useState("")
 
   /* //! ERROR STATE */
   if (isError) {
@@ -37,14 +37,16 @@ const Properties = () => {
         <div className="flexColBetween paddings innerWidth properties-container">
           <SearchBar filter={filter} setFilter={setFilter}/>
 
-          <div className="paddings  properties">
-            {
-              data.map((card, i) => (
-                <PropertyCard 
-                    card={card} 
-                    key={i}/>
-              ))
-            }
+          <div className="paddings properties">
+              {
+                data
+                  .filter((property) => property.title.toLowerCase().includes(filter.toLowerCase()))
+                  .map((card, i) => (
+                  <PropertyCard 
+                      card={card} 
+                      key={i}/>
+                ))
+              }
           </div>
           
         </div>
