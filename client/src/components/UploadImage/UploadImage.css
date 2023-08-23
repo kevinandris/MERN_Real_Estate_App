@@ -9,3 +9,17 @@
     border: 2px dashed grey;
     cursor: pointer;
 }
+
+.uploadImage {
+    width: 80%;
+    height: 25rem;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.uploadImage>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -30,8 +30,9 @@ const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) 
         <div className="flexColCenter uploadWrapper">
             {
                 !imageURL ? (
-                    <div className="flexColCenter uploadZone"
-                        
+                    <div 
+                        className="flexColCenter uploadZone"
+                        onClick={() => widgetRef.current?.open()}
                     >
                         <AiOutlineCloudUpload size={50} color='grey' />
                         <span>Upload Image</span>
