@@ -18,9 +18,19 @@ const Facilities = ({prevStep, propertyDetails, setPropertyDetails, setOpened, s
             value < 1 ? "Must have at least one bathroom" : null,
         }
     })
+
+    const { bedrooms, parkings, bathrooms } = form.values;
     
     const handleSubmit = () => {
+        const { hasErrors } = form.validate();
 
+        if (!hasErrors) {
+            setPropertyDetails((prev) => ({
+                ...prev,
+                facilities: { bedrooms, parkings, bathrooms },
+            }))
+            // mutate()
+        }
     }
     
     return (
