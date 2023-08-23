@@ -1,11 +1,11 @@
 import React from 'react'
 import { useForm } from '@mantine/form'
 import { validateString } from '../../utils/common'
-import { Select, TextInput } from '@mantine/core'
+import { Button, Group, Select, TextInput } from '@mantine/core'
 import useCountries from '../../hooks/useCountries'
 import Map from '../Map/Map'
 
-const AddLocation = ({propertyDetails, setPropertyDetails}) => {
+const AddLocation = ({propertyDetails, setPropertyDetails, nextStep}) => {
 
 const { getAll} = useCountries()
     const form = useForm({
@@ -24,12 +24,30 @@ const { getAll} = useCountries()
 
     const { country, city, address } = form.values;
     
+    const handleSubmit =() => {
+        const {hasErrors} = form.validate()
+
+        if (!hasErrors) {
+            setPropertyDetails((prev) => ({...prev, city, address, country}))
+            nextStep();
+        }
+    }
     return (
-        <form>
+        <form
+            onSubmit={(e) => {
+                e.preventDefault();
+                handleSubmit()
+            }}
+        >
 
-        {/* left side */}
-            <div className="flexCenter">
+            <div className="flexCenter" style={{
+                justifyContent: "space-between",
+                gap: "3rem",
+                marginTop: "3rem",
+                flexDirection: "row"
+                }}>
 
+                {/* left side */}
                 {/* inputs */}
                 <div className="flexColStart">
                     <Select 
@@ -49,7 +67,7 @@ const { getAll} = useCountries()
                         withAsterisk
                         label="City"
                         {
-                            ...form.getInputProps("City", {type: "input"})
+                            ...form.getInputProps("city", {type: "input"})
                         }
                     />
 
@@ -63,16 +81,19 @@ const { getAll} = useCountries()
                     />
                 </div>
 
-            </div>
+            {/* right side */}
+                <div style={{flex: 1}}>
+                    <Map 
+                        address={address}
+                        city={city}
+                        country={country}
+                    />
+                </div>
+        </div>
 
-        {/* right side */}
-            <div>
-                <Map 
-                    address={address}
-                    city={city}
-                    country={country}
-                />
-            </div>
+        <Group position='center' mt={'xl'}>
+            <Button type='submit'>Next Step</Button>
+        </Group>
         </form>
     )
 }
