@@ -7,7 +7,8 @@ import Map from '../Map/Map'
 
 const AddLocation = ({propertyDetails, setPropertyDetails, nextStep}) => {
 
-const { getAll} = useCountries()
+    const { getAll} = useCountries()
+    
     const form = useForm({
         initialValues: {
             country: propertyDetails?.country,
