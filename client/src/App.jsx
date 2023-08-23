@@ -10,6 +10,7 @@ import Properties from './pages/Properties/Properties'
 import Property from './pages/Property/Property'
 import Home from './pages/Website'
 import UserDetailContext from './components/context/UserDetailsContext'
+import Bookings from './pages/Bookings/Bookings'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
                   <Route index element={<Properties />} />
                   <Route path=':propertyId' element={<Property />} />
                 </Route>
+                <Route path='/bookings' element={<Bookings/>} />
               </Route>
 
             </Routes>
