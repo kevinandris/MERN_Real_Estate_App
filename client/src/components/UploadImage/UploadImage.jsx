@@ -16,7 +16,7 @@ const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) 
             {
                 cloudName: "daz6x21s0",
                 uploadPreset: "a2zabhnh",
-                maxFile: 1
+                maxFiles: 1
             },
             (err, result) => {
                 if (result.event === "success") {
@@ -55,7 +55,7 @@ const UploadImage = ({propertyDetails, setPropertyDetails, nextStep, prevStep}) 
 
         <Group position='center' mt={'xl'}>
             <Button variant="default" onClick={prevStep}>Back</Button>
-            <Button  onClick={handleNext} disabled={!imageURL}>Next</Button>
+            <Button  onClick={handleNext}>Next</Button> {/*  ADD THIS ;later == > disabled={!imageURL} */}
         </Group>
         </div>
     )
