@@ -7,6 +7,7 @@ import UserDetailContext from '../context/UserDetailsContext';
 import useProperties from '../../hooks/useProperties';
 import { useMutation } from 'react-query';
 import { toast } from 'react-toastify';
+import { createResidency } from '../../utils/api';
 
 const Facilities = ({
     prevStep, 
@@ -114,9 +115,8 @@ const Facilities = ({
                         Back
                     </Button>
 
-                    <Button type='submit' color='green' >
-                        {/* {isLoading ? "Submitting" : "Add Property"} */}
-                        Add property
+                    <Button type='submit' color='green' disabled={isLoading}>
+                        {isLoading ? "Submitting" : "Add Property"}
                     </Button>
                     
                 </Group>

@@ -160,3 +160,23 @@ export const getAllBookings = async (email, token) => {
         throw error
     }
 }
+
+// ! exported to Facilities.jsx
+export const createResidency = async (data, token) => {
+    try {
+        const res = await api.post(
+            `/residency/create`,
+            {
+                email,
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        )
+    } catch (error) {
+        toast.error("Something went wrong while creating a residency")
+        throw error
+    }
+}
