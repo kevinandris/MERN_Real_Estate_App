@@ -10,7 +10,8 @@
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
     
 #   To run the project:
-    On VS code terminal type npm run dev.
+    Client folder: On VS code terminal type npm run dev.
+    Sever folder: On VS code terminal type npm start.
 
 #   Frontend dependencies installed:
     1) framer-motion
