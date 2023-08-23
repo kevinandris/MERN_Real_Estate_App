@@ -2,7 +2,7 @@
 import React from 'react'
 import { validateString } from '../../utils/common';
 import { Box, Button, Group, NumberInput, TextInput, Textarea } from '@mantine/core';
-import { Form } from '@mantine/form';
+import { Form, useForm } from '@mantine/form';
 
 const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails }) => {
 
@@ -27,7 +27,7 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
         const {hasErrors} = form.validate()
 
         if (!hasErrors) {
-            setPropertyDetails((prev) => ({...prev, city, address, country}))
+            setPropertyDetails((prev) => ({...prev, title, description, price}))
             nextStep();
         }
     }
@@ -66,6 +66,7 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
                 <Button variant='default' onClick={prevStep}>
                     Back
                 </Button>
+                
                 <Button type='submit'>
                     Next step
                 </Button>
