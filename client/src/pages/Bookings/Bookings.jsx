@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../Properties/Properties.css'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import { PuffLoader } from 'react-spinners'
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import useProperties from '../../hooks/useProperties'
+import UserDetailContext from '../../components/context/UserDetailsContext';
 
 const Bookings = () => {
   const {data, isError, isLoading} = useProperties()
   const [filter, setFilter] = useState("")
+  const { userDetails: {bookings}} = useContext(UserDetailContext)
 
   /* //! ERROR STATE */
   if (isError) {
@@ -40,6 +42,7 @@ const Bookings = () => {
           <div className="paddings properties">
               {
                 data
+                  .filter((property) => bookings.map((booking) => booking.id).includes(property.id))
                   .filter((property) => 
                     property.title.toLowerCase().includes(filter.toLowerCase()) ||
                     property.city.toLowerCase().includes(filter.toLowerCase()) ||
