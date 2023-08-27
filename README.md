@@ -45,3 +45,8 @@
     5) express
     6) express-async-handler
     7) express-oauth2-jwt-bearer
+    8) axios
+
+#   To install vite:
+    1) create a project with vite@latest my-project -- --template react
+    2) cd my-project
