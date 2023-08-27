@@ -22,7 +22,20 @@
     4) react-icons
     5) react-router-dom
     6) react-outside-click-handler
-    7) swiper
+    7) react-leaflet
+    8) react-query
+    9) react-toastify
+    10) react-outside-click-handler
+    11) react-spinners
+    12) swiper
+    13) loadash
+    14) dayjs
+    15) world-countries
+    16) mantine/core
+    17) mantine/dates
+    18) mantine/form
+    19) mantine/hooks
+    20) esri-leaflet-geocoder
 
 #   Backend dependencies installed:
     1) prisma
