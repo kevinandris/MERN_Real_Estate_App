@@ -3,6 +3,8 @@
     2) this app is a marketing website and promotes modern design for the frontend and purposely introduce houses/places
        that are comfortable for staying.
     3) this React app uses Vite that is incredibly a useful tool to run the project faster and easier.
+    4) Animation applied on landing page.
+    5) Responsive sizes included for mobile and tablet sizes.
 
 #   Project images:
     1) landing page
