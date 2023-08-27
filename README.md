@@ -7,6 +7,8 @@
     5) Responsive sizes included for mobile and tablet sizes.
 
 #   Project images:
+
+#   Frontend
     1) landing page
 ![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
@@ -23,9 +25,13 @@
     4) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
 
-    
+#   Backend:
+    1) Residency
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/c99026db-b631-4724-b5a8-b388eea1aa6b)
 
-    
+    2) User
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/f0bfe944-23f3-4b38-8ce9-11f0a5d4ad1a)
+
 
 #   To run the project:
     Client folder: On VS code terminal type npm run dev.
