@@ -13,7 +13,10 @@
 
     2) Add property page cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
-    
+
+    3) Side menu pops-up on mobile screen size:
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
+
 #   To run the project:
     Client folder: On VS code terminal type npm run dev.
     Sever folder: On VS code terminal type npm start.
