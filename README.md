@@ -1,4 +1,4 @@
-#   Project description:
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/6f97c19e-8634-4c15-9123-25f47e4a3f6a)![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/911a1055-5bcd-4fff-85bf-b71556a6153e)#   Project description:
     1) MERN stack - MongoDB, Express, ReactJs, and NodeJs.
     2) this app is a marketing website and promotes modern design for the frontend and purposely introduce houses/places
        that are comfortable for staying.
@@ -17,8 +17,13 @@
     3) Authentication page
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
 
+    - An icon of a user will appear on the navigation bar on the right side.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/9e33e07f-7ebc-4e20-8474-b4d0230b9307)
+
     4) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
+
+    
 
     
 
