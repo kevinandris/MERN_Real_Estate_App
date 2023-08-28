@@ -17,7 +17,7 @@
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
 
     3) Properties page to book a visit to a speciific property.
-![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/762df3d9-4a3d-481c-9889-ab2e58b3c0fa)
 
     4) Authentication page
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
