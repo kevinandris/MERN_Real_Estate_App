@@ -20,6 +20,12 @@
     3) Properties page to book a visit to a speciific property.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/762df3d9-4a3d-481c-9889-ab2e58b3c0fa)
 
+    - Upon booking a calendar will appear for users.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/807f7f62-edbe-4cbe-ba73-f694043904f7)
+
+    - After successful booking, a toast success reminder will appear.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/d011af78-3b19-413a-bbd9-02008b5ab12e)
+
     4) Authentication page
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
 
