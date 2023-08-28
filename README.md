@@ -1,16 +1,41 @@
-#   Project description:
-    1) MERN stack - MongoDB, Express, ReactJs, and NodeJs
-    2) this app promotes modern design for the frontend and purposely introduce houses/places
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/6f97c19e-8634-4c15-9123-25f47e4a3f6a)![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/911a1055-5bcd-4fff-85bf-b71556a6153e)#   Project description:
+    1) MERN stack - MongoDB, Express, ReactJs, and NodeJs.
+    2) this app is a marketing website and promotes modern design for the frontend and purposely introduce houses/places
        that are comfortable for staying.
     3) this React app uses Vite that is incredibly a useful tool to run the project faster and easier.
+    4) Animation applied on landing page.
+    5) Responsive sizes included for mobile and tablet sizes.
 
 #   Project images:
+
+#   Frontend
     1) landing page
 ![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
-    
+
+    2) Add property page cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
+
+    3) Authentication page
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
+
+    - An icon of a user will appear on the navigation bar on the right side.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/9e33e07f-7ebc-4e20-8474-b4d0230b9307)
+
+    4) Side menu pops-up on mobile screen size:
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
+
+#   Backend:
+    1) Residency
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/c99026db-b631-4724-b5a8-b388eea1aa6b)
+
+    2) User
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/f0bfe944-23f3-4b38-8ce9-11f0a5d4ad1a)
+
+
 #   To run the project:
-    On VS code terminal type npm run dev.
+    Client folder: On VS code terminal type npm run dev.
+    Sever folder: On VS code terminal type npm start.
 
 #   Frontend dependencies installed:
     1) framer-motion
@@ -19,7 +44,20 @@
     4) react-icons
     5) react-router-dom
     6) react-outside-click-handler
-    7) swiper
+    7) react-leaflet
+    8) react-query
+    9) react-toastify
+    10) react-outside-click-handler
+    11) react-spinners
+    12) swiper
+    13) loadash
+    14) dayjs
+    15) world-countries
+    16) mantine/core
+    17) mantine/dates
+    18) mantine/form
+    19) mantine/hooks
+    20) esri-leaflet-geocoder
 
 #   Backend dependencies installed:
     1) prisma
@@ -29,3 +67,8 @@
     5) express
     6) express-async-handler
     7) express-oauth2-jwt-bearer
+    8) axios
+
+#   To install vite:
+    1) create a project with vite@latest my-project -- --template react
+    2) cd my-project
