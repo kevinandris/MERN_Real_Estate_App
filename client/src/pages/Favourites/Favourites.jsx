@@ -39,7 +39,7 @@ const Favourites = () => {
         <div className="flexColBetween paddings innerWidth properties-container">
           <SearchBar filter={filter} setFilter={setFilter}/>
 
-          <div className="paddings properties">
+          <div className="paddings flexCenter properties">
               {
                 data
                   .filter((property) => favourites.includes(property.id))

@@ -16,7 +16,7 @@ const Map = ({address, city, country}) => {
             // backgroundColor: 'red'
         }}
     >
-        <TileLayer url='https://{s}.tile.openstreetmap.org/{z}{x}{y}.png' />
+        <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <GeoCoderMarker address={`${address} ${city} ${country}`} />
     </MapContainer>
   )
