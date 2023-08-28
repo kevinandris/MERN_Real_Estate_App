@@ -13,8 +13,9 @@
 ![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
 
-    2) Add property page and book a visit cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
+    2) Add property page, book a visit, and liking a property cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/db001435-a17f-4aaa-bc04-314f2ad9cb56)
 
     3) Properties page to book a visit to a speciific property.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/762df3d9-4a3d-481c-9889-ab2e58b3c0fa)
