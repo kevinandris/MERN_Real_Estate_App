@@ -1,4 +1,4 @@
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/6f97c19e-8634-4c15-9123-25f47e4a3f6a)![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/911a1055-5bcd-4fff-85bf-b71556a6153e)#   Project description:
+#   Project description:
     1) MERN stack - MongoDB, Express, ReactJs, and NodeJs.
     2) this app is a marketing website and promotes modern design for the frontend and purposely introduce houses/places
        that are comfortable for staying.
@@ -13,16 +13,19 @@
 ![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
 
-    2) Add property page cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
+    2) Add property page, cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
 
-    3) Authentication page
+    3) Properties page to book a visit to a speciific property.
+![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
+
+    4) Authentication page
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
 
     - An icon of a user will appear on the navigation bar on the right side.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/9e33e07f-7ebc-4e20-8474-b4d0230b9307)
 
-    4) Side menu pops-up on mobile screen size:
+    5) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
 
 #   Backend:
