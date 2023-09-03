@@ -89,5 +89,5 @@
 
 #   Personal opinion on improving self-skills in coding:
     1) Be active to compile the code every time I create a function to avoid blank/white screen
-       due to unimported/outedated dependecies, files etc to save lots of time.
+       and due to unimported/outedated dependecies, files etc to save lots of time.
     2) Ask for help from someone or something before moving to the next task to ensure the current code is robust.
