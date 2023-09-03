@@ -83,6 +83,10 @@
     1) create a project with vite@latest my-project -- --template react
     2) cd my-project
 
+#   Constraints:
+    1) Unable to deploy the project.
+    2) Cancel booking button is not showing after a user books a property. 
+
 #   Personal opinion on improving self-skills in coding:
     1) Be active to compile the code every time I create a function to avoid blank/white screen
        due to unimported/outedated dependecies, files etc to save lots of time.
