@@ -35,6 +35,9 @@
     5) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
 
+    6) Loading icon will appear while fetching the data or no connection.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b99342a3-58fd-4371-b4d0-a17b26727d16)
+
 #   Backend (data are being stored in MongoDB):
     1) Residency
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/c99026db-b631-4724-b5a8-b388eea1aa6b)
