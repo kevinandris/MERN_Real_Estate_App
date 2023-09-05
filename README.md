@@ -35,7 +35,7 @@
     5) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
 
-#   Backend:
+#   Backend (data are being stored in MongoDB):
     1) Residency
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/c99026db-b631-4724-b5a8-b388eea1aa6b)
 
