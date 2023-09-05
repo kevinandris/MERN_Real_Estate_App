@@ -32,7 +32,10 @@
     - An icon of a user will appear on the navigation bar on the right side.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/9e33e07f-7ebc-4e20-8474-b4d0230b9307)
 
-    5) Side menu pops-up on mobile screen size:
+    5) An icon of a user will appear on the header, once they are logged in:
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/458eb736-ec52-430e-8be6-1ab265cda6a5)
+
+    6) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
 
 #   Backend:
