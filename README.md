@@ -80,11 +80,11 @@
     7) express-oauth2-jwt-bearer
     
 #   To install vite:
-    1) create a project with vite@latest my-project -- --template react
+    1) create a project with vite@latest my-project -- --template react or npm create @vite/latest
     2) cd my-project
 
 #   Constraints:
-    1) Unable to deploy the project.
+    1) Still Unable to deploy the project on Vercel platform (an error still occurs).
     2) Cancel booking button is not showing after a user books a property.
     3) Uploading an image section for adding a property from a registerede user still not working.
 
