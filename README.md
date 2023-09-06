@@ -1,7 +1,7 @@
 #   Project description:
     1) MERN stack - MongoDB, Express, ReactJs, and NodeJs.
-    2) this app is a marketing website and promotes modern design for the frontend and purposely introduce houses/places
-       that are comfortable for staying.
+    2) this app is a marketing website and promotes modern design 
+       for the frontend and purposely introduce houses/places that are comfortable for staying.
     3) this React app uses Vite that is incredibly a useful tool to run the project faster and easier.
     4) Animation applied on landing page.
     5) Responsive sizes included for mobile and tablet sizes.
@@ -13,7 +13,8 @@
 ![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)
 ![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
 
-    2) Add property page, book a visit, and liking a property cannot be accessed unless a user is registered. Moreoever, a toast reminder will pop-ups.
+    2) Add property page, book a visit, and liking a property cannot be accessed unless a user is registered. 
+       Moreoever, a toast reminder will pop-ups.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/db001435-a17f-4aaa-bc04-314f2ad9cb56)
 
