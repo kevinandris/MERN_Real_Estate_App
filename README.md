@@ -51,8 +51,8 @@
 
 
 #   To run the project:
-    Client folder: On VS code terminal type npm run dev.
-    Sever folder: On VS code terminal type npm start.
+    1) Client folder: On VS code terminal type npm run dev.
+    2) Server folder: On VS code terminal type npm start.
 
 #   Frontend dependencies installed:
     1) framer-motion
