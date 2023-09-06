@@ -1,7 +1,7 @@
 #   Project description:
     1) MERN stack - MongoDB, Express, ReactJs, and NodeJs.
-    2) this app is a marketing website and promotes modern design 
-       for the frontend and purposely introduce houses/places that are comfortable for staying.
+    2) this app is a marketing website and promotes modern design for the frontend and purposely introduce 
+       houses/places that are comfortable for staying accross different regions.
     3) this React app uses Vite that is incredibly a useful tool to run the project faster and easier.
     4) Animation applied on landing page.
     5) Responsive sizes included for mobile and tablet sizes.
