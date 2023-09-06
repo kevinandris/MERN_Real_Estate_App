@@ -98,4 +98,5 @@
 #   Personal opinion on improving self-skills in coding:
     1) Be active to compile the code every time I create a function to avoid blank/white screen
        and due to unimported/outedated dependecies, files etc to save lots of time.
-    2) It is effective to gather all the necessary images and icons before implement the code.
+    2) It is effective to gather all the necessary images and icons before implementing
+       the code to save lots time.
