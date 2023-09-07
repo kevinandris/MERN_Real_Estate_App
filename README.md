@@ -88,8 +88,8 @@
     7) express-oauth2-jwt-bearer
     
 #   To install vite:
-    1) create a project with vite@latest my-project -- --template react or npm create @vite/latest
-    2) cd my-project
+    1) On VS code terminal type: npx create-@vite/latest
+    2) Create a name, choose a framework and variant. 
 
 #   Constraints:
     1) Still Unable to deploy the project on Vercel platform (an error still occurs).
