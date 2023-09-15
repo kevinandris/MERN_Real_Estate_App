@@ -37,7 +37,7 @@
     5) Properties page - with search function
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/82e8b298-5058-4a9f-8cb2-9be181ba47d3)
 
-    6) Side menu pops-up on mobile screen size:
+    6) Side menu pops-up on mobile and table screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/f7bfe78c-445f-421b-9cbf-18eb3872a79d)
 
     7) Loading icon will appear while fetching the data or no connection.
