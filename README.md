@@ -11,30 +11,31 @@
 
 #   Frontend
     1) landing page
-![re-landingpage1](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7e81df06-b7a1-4321-9f83-622f9332be56)![re-landingpage2](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/debe7c12-786f-434b-a418-3d9577bc105a)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/be93d2dd-893e-4e7e-802c-d8a68d74dc2d)
 
     2) Add property page, book a visit, and liking a property cannot be accessed unless a user is 
        registered. Moreoever, a toast reminder will pop-ups.
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/08226950-72c7-4af8-a4a4-db1866839b11)
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/db001435-a17f-4aaa-bc04-314f2ad9cb56)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/2594e1c0-6f5a-46a4-a01e-c4f53f02cd4d)
+      - Once the users is logged in, they could like the properties through the heart icon on every image.
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/7134c6d9-4865-4865-8831-e1ce1dedd4bd)
 
     3) Properties page to book a visit to a speciific property.
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/762df3d9-4a3d-481c-9889-ab2e58b3c0fa)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/451f046a-8985-48c9-a102-6d1679be383a)
 
     - Upon booking, a calendar will appear for users.
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/807f7f62-edbe-4cbe-ba73-f694043904f7)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/901d454b-39fc-4499-a9fb-0523931b4975)
 
     - After successful booking, a toast success reminder will appear.
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/d011af78-3b19-413a-bbd9-02008b5ab12e)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/98ae3831-459a-41be-bf81-15b9b7cc9fcf)
 
     4) Authentication page
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b5b97e6b-6bea-4b44-8f30-6901c71cf069)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/87c0a6bb-9b68-4c1a-a3b4-4f97e3c7e427)
 
     - An icon of a user will appear on the navigation bar on the right side once they are logged in.
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/9e33e07f-7ebc-4e20-8474-b4d0230b9307)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/e3158215-8960-4c9d-9303-1c59427f21dd)
 
     5) Side menu pops-up on mobile screen size:
-![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/859be793-c806-4d3c-bbbf-bf50878d8ce2)
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/f7bfe78c-445f-421b-9cbf-18eb3872a79d)
 
     6) Loading icon will appear while fetching the data or no connection.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b99342a3-58fd-4371-b4d0-a17b26727d16)
