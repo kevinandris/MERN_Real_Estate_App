@@ -34,10 +34,13 @@
     - An icon of a user will appear on the navigation bar on the right side once they are logged in.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/e3158215-8960-4c9d-9303-1c59427f21dd)
 
-    5) Side menu pops-up on mobile screen size:
+    5) Properties page - with search function
+![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/82e8b298-5058-4a9f-8cb2-9be181ba47d3)
+
+    6) Side menu pops-up on mobile screen size:
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/f7bfe78c-445f-421b-9cbf-18eb3872a79d)
 
-    6) Loading icon will appear while fetching the data or no connection.
+    7) Loading icon will appear while fetching the data or no connection.
 ![image](https://github.com/kevinandris/MERN_Real_Estate_App/assets/102328858/b99342a3-58fd-4371-b4d0-a17b26727d16)
 
 #   Backend (data are being stored in MongoDB):
