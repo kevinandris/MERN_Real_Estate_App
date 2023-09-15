@@ -6,7 +6,7 @@ const GetStarted = () => {
     <section className="g-wrapper">
       <div className="paddings innerWidth g-container">
         <div className="flexColCenter inner-container">
-          <span className="primaryText">Get started with KEIPY</span>
+          <span className="primaryText">Get started with Keipy</span>
           <span className="secondaryText">
             Subscribe and find super attractive prices quotes from us
             <br />
