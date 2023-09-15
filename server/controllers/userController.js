@@ -11,14 +11,15 @@ export const createUser = asyncHandler(async(req, res) => {
    /*  console.log(email) */
 
    // * To notify if a user is successfully registered as a first time user
-   const userExist = await prisma.user.findUnique({where: {email: email}})
-   if (!userExist) {
-       const user = await prisma.user.create({data: req.body})
-       res.send({
-           message: "User registered successfully",
-           user: user,  
-        })
-    }
+    const userExist = await prisma.user.findUnique({where: {email: email}})
+        if (!userExist) {
+            const user = await prisma.user.create({data: req.body})
+            res.send({
+                message: "User registered successfully",
+                user: user,  
+                })
+        }
+        
     else {
         // * check if a user is registered or not
         res.status(201).send({message: "User already registered"})

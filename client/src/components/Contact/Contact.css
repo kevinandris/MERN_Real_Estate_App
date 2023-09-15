@@ -14,6 +14,10 @@
     gap: 0.5rem;
 }
 
+.c-left .primaryText {
+    color: var(--green);
+}
+
 .contactModes {
     margin-top: 2rem;
     gap: 1rem;
@@ -34,8 +38,8 @@
 
 .mode .button {
     width: 100%;
-    background: var(--lightblue);
-    color: var(--blue);
+    background: var(--green);
+    color: #a2e895;
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -48,6 +52,7 @@
 .mode .detail .primaryText{
     font-size: 1.1rem;
     font-weight: 600;
+    color: var(--green);
 }
 
 .mode:hover {
@@ -56,7 +61,7 @@
 }
 
 .mode .button:hover {
-    background: var(--blue-gradient);
+    background: var(--green);
     color: #fff;
     scale: 0.8;
 }

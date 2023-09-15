@@ -37,8 +37,8 @@
     background: var(--orange-gradient);
     border-radius: 999px;
     position: absolute;
-    right: 28%;
-    top: -5%;
+    right: 42%;
+    /* top: -5%; */
     z-index: -1;
 }
 

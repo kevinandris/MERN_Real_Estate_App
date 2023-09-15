@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-icons": "^4.11.0",
     "world-countries": "^4.0.0"
   }
 }

@@ -3,6 +3,10 @@
     /* background-color: red; */
 }
 
+.r-container .r-head {
+    color: var(--green);
+}
+
 
 .swiper-horizontal {
     overflow: visible;

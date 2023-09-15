@@ -88,7 +88,7 @@ const AddPropertyModal = ({opened, setOpened}) => {
                     </Stepper.Step>
 
                     <Stepper.Completed>
-                    Completed, click back button to get to previous step
+                        Completed, click back button to get to previous step
                     </Stepper.Completed>
 
                 </Stepper>

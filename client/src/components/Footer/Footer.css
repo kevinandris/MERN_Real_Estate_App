@@ -1,17 +1,36 @@
 .f-container {
     justify-content: space-between;
-    border-top: .5px solid rgba(0, 0, 0, 0.148);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.148);
 }
 
 .f-left {
     gap: 1rem;
 }
 
-.f-menu {
+/* .f-left img {
+    width: 32%;
+    aspect-ratio: 3/2;
+    mix-blend-mode: color-burn;
+} */
+
+.f-left .linkTitle {
+    margin-top: 12px;
+}
+
+.f-left .secondaryText {
+    margin-top: 15px;
+}
+
+.f-right span {
+    color: var(--green);
+}
+
+.f-right .f-menu {
     gap: 1.5rem;
     margin-top: 1.5rem;
     font-weight: 500;
 }
+
 
 /* ! MEDIA SCREEN */
 @media (max-width: 768px) {
@@ -19,7 +38,7 @@
         justify-content: center;
     }
 
-    .f-container>div {
+    .f-container > div {
         align-items: center !important;
         text-align: center;
     }

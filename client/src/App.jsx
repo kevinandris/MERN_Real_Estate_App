@@ -29,7 +29,6 @@ function App() {
           <Suspense fallback={<div>...Loading</div>}>
 
             <Routes>
-
               <Route element={<Layout/>}>
                 <Route path="/" element={<Home />}/>
                 <Route path='/properties'>
@@ -39,7 +38,6 @@ function App() {
                 <Route path='/bookings' element={<Bookings/>} />
                 <Route path='/favourites' element={<Favourites/>} />
               </Route>
-
             </Routes>
 
           </Suspense> 
