@@ -1,79 +1,88 @@
 // ! exported to AddPropertyModal.jsx
-import React from 'react'
-import { validateString } from '../../utils/common';
-import { Box, Button, Group, NumberInput, TextInput, Textarea } from '@mantine/core';
-import { Form, useForm } from '@mantine/form';
+import React from "react";
+import { validateString } from "../../utils/common";
+import {
+  Box,
+  Button,
+  Group,
+  NumberInput,
+  TextInput,
+  Textarea,
+} from "@mantine/core";
+import { Form, useForm } from "@mantine/form";
 
-const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails }) => {
+const BasicDetails = ({
+  prevStep,
+  nextStep,
+  propertyDetails,
+  setPropertyDetails,
+}) => {
+  const form = useForm({
+    initialValues: {
+      title: propertyDetails.title,
+      description: propertyDetails.description,
+      price: propertyDetails.price,
+    },
 
-    const form = useForm({
-        initialValues: {
-            title: propertyDetails.title,
-            description: propertyDetails.description,
-            price: propertyDetails.price
-        },
+    validate: {
+      title: (value) => validateString(value),
+      description: (value) => validateString(value),
+      price: (value) =>
+        value < 1000 ? "Must be greater than 999 dollars" : null,
+    },
+  });
 
-        validate: {
-            title: (value) => validateString(value),
-            description: (value) => validateString(value),
-            price: (value) => 
-                value < 1000 ? "Must be greater than 999 dollars" : null,
-        }
-    })
+  const { title, description, price } = form.values;
 
-    const { title, description, price } = form.values;
-    
-    const handleSubmit =() => {
-        const {hasErrors} = form.validate()
+  const handleSubmit = () => {
+    const { hasErrors } = form.validate();
 
-        if (!hasErrors) {
-            setPropertyDetails((prev) => ({...prev, title, description, price}))
-            nextStep();
-        }
+    if (!hasErrors) {
+      setPropertyDetails((prev) => ({ ...prev, title, description, price }));
+      nextStep();
     }
+  };
 
   return (
     <Box maw="50%" mx="auto" my="md">
-        <Form
-            onSubmit={(e) => {
-                e.preventDefault();
-                handleSubmit()
-            }}
-        >
-            <TextInput 
-                withAsterisk
-                label="Title"
-                placeholder='Property Name'
-                {...form.getInputProps("title")}
-            />
-            
-            <Textarea 
-                 withAsterisk
-                placeholder='Description'
-                label="Description"
-                {...form.getInputProps("description")}
-            />
+      <Form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+      >
+        <TextInput
+          withAsterisk
+          label="Title"
+          placeholder="Property Name"
+          {...form.getInputProps("title")}
+        />
 
-            <NumberInput 
-                withAsterisk
-                label="Price"
-                placeholder='1000'
-                min={0}
-                {...form.getInputProps("price")}
-            />
+        <Textarea
+          withAsterisk
+          placeholder="Description"
+          label="Description"
+          {...form.getInputProps("description")}
+        />
 
-            <Group position='center' mt={'xl'}>
-                <Button variant='default' onClick={prevStep}>
-                    Back
-                </Button>
-                
-                <Button type='submit'>
-                    Next step
-                </Button>
-            </Group>
-        </Form>
+        <NumberInput
+          withAsterisk
+          label="Price"
+          placeholder="1000"
+          min={0}
+          {...form.getInputProps("price")}
+        />
+
+        <Group position="center" mt={"xl"}>
+          <Button variant="default" onClick={prevStep}>
+            Back
+          </Button>
+
+          <Button type="submit">Next step</Button>
+        </Group>
+      </Form>
     </Box>
-  )
-}
+  );
+};
 
-export default BasicDetails
+export default BasicDetails;

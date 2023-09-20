@@ -2,5 +2,8 @@
   "dependencies": {
     "react-icons": "^4.11.0",
     "world-countries": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

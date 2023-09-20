@@ -1,30 +1,30 @@
-import React, { useContext, useEffect, useRef } from 'react'
-import UserDetailContext from '../components/context/UserDetailsContext'
-import { useAuth0 } from '@auth0/auth0-react'
-import { getAllFav } from '../utils/api.js'
-import { useQuery } from 'react-query'
+import React, { useContext, useEffect, useRef } from "react";
+import UserDetailContext from "../context/UserDetailsContext.js";
+import { useAuth0 } from "@auth0/auth0-react";
+import { getAllFav } from "../utils/api.js";
+import { useQuery } from "react-query";
 
 const useFavourites = () => {
+  const { userDetails, setUserDetails } = useContext(UserDetailContext);
+  const queryRef = useRef();
+  const { user } = useAuth0();
 
-    const { userDetails, setUserDetails}  = useContext(UserDetailContext)
-    const queryRef = useRef()
-    const { user } = useAuth0()
+  const { data, isLoading, isError, refetch } = useQuery({
+    queryKey: "allFavourites",
+    queryFn: () => getAllFav(user?.email, userDetails?.token),
+    onSuccess: (data) =>
+      setUserDetails((prev) => ({ ...prev, favourites: data })),
+    enabled: user !== undefined,
+    staleTime: 30000,
+  });
 
-    const { data, isLoading, isError, refetch} = useQuery({
-        queryKey: "allFavourites",
-        queryFn: () => getAllFav(user?.email, userDetails?.token),
-        onSuccess: (data) => setUserDetails((prev) => ({...prev, favourites: data})),
-        enabled: user !== undefined,
-        staleTime: 30000,
-    })
+  queryRef.current = refetch;
 
-    queryRef.current = refetch;
+  useEffect(() => {
+    queryRef.current && queryRef.current();
+  }, [userDetails?.token]);
 
-    useEffect(() => {
-        queryRef.current && queryRef.current()
-    }, [userDetails?.token])
-
-    return { data, isError, isLoading, refetch };
-}
+  return { data, isError, isLoading, refetch };
+};
 
 export default useFavourites;

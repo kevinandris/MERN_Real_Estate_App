@@ -1,24 +1,24 @@
 .inner-container {
-    gap: 1.5rem;
-    background: var(--green);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 6px solid var(--green);
-    text-align: center;
+  gap: 1.5rem;
+  background: var(--green);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 6px solid var(--green);
+  text-align: center;
 }
 
 .inner-container .primaryText {
-    color: #fff;
-    font-weight: 600;
-    }
+  color: #fff;
+  font-weight: 600;
+}
 
 .inner-container .secondaryText {
-    color: rgba(255, 255, 255, 0.587);
+  color: rgba(255, 255, 255, 0.587);
 }
 
 .inner-container .button {
-    background: #158549;
-    border: 2px solid #fff;
-    box-shadow: var(--shadow);
-    border-radius: 10px;
+  background: #158549;
+  border: 2px solid #fff;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
 }

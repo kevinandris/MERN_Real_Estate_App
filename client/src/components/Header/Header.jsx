@@ -10,7 +10,6 @@ import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
 import useAuthCheck from "../../hooks/useAuthCheck";
 import { FaGripfire } from "react-icons/fa";
 
-
 const Header = () => {
   const [menuOpened, setMenuOpened] =
     useState(false); /* toggle menu to open or close */
